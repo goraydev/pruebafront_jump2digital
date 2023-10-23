@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import titleRickyMorty from "./assets/titleRickyMorty.webp";
+import { Search } from "./components/Search";
+import { Cards } from "./components/Cards";
+import useFetch from "./hooks/useFetch";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { characters, isLoading } = useFetch();
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className="container">
+        <img
+          src={titleRickyMorty}
+          alt="logo Ricky y Morty"
+          width="400"
+          height="50"
+          className="logo"
+        />
+        <Search />
+
+        <h1 className="text-4xl text-white mb-10 font-bold titulo relative text-center md:text-start">
+          Lista de personajes
+        </h1>
+
+        <Cards characters={characters} isLoading={isLoading} />
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
