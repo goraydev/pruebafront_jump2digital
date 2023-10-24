@@ -1,20 +1,29 @@
-export const Search = () => {
+import { useState } from "react";
+
+export const Search = ({ handleKey }) => {
+  const [searchInput, setSearchInput] = useState("");
+
   return (
     <div className="my-12 relative flex items-center justify-end">
-      <input
-        type="text"
-        name="search"
-        id="search"
-        className="rounded-3xl p-4 w-full bg-teal-700 placeholder:text-slate-300 opacity-80"
-        placeholder="Buscar personaje ..."
-      />
+      <form action="" className="w-full">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          onKeyUp={(e) => handleKey(e.target.value)}
+          className="rounded-3xl p-4 w-full bg-teal-700 placeholder:text-slate-300 opacity-80"
+          placeholder="Buscar personaje ..."
+        />
+      </form>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-search absolute mr-3"
         width={24}
         height={24}
         viewBox="0 0 24 24"
-        stroke-width={2}
+        strokeWidth={2}
         stroke="rgb(203, 213, 225)"
         fill="none"
         strokeLinecap="round"

@@ -1,7 +1,19 @@
 import React from "react";
 import { Card } from "./Card";
+import { Pagination } from "./Pagination";
 
 export const Cards = ({ characters, isLoading }) => {
+  if (characters.error) {
+    return (
+      <div
+        className="w-full px-4 py-3 text-sm text-pink-500 border border-pink-100 rounded bg-pink-50"
+        role="alert"
+      >
+        <p>Personaje no encontrado, realice otra búsqueda</p>
+      </div>
+    );
+  }
+
   return (
     <>
       {isLoading ? (
@@ -32,11 +44,14 @@ export const Cards = ({ characters, isLoading }) => {
           </svg>
         </>
       ) : (
-        <div className="gridcards">
-          {characters?.results?.map((character) => (
-            <Card key={character.id} character={character} />
-          ))}
-        </div>
+        <>
+          <div className="gridcards">
+            {characters?.results?.map((character) => (
+              <Card key={character.id} character={character} />
+            ))}
+          </div>
+          <Pagination />
+        </>
       )}
     </>
   );
