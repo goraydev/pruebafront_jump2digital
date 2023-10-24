@@ -1,8 +1,9 @@
 import React from "react";
 import { Card } from "./Card";
-import { Pagination } from "./Pagination";
 
 export const Cards = ({ characters, isLoading }) => {
+
+
   if (characters.error) {
     return (
       <div
@@ -44,14 +45,11 @@ export const Cards = ({ characters, isLoading }) => {
           </svg>
         </>
       ) : (
-        <>
-          <div className="gridcards">
-            {characters?.results?.map((character) => (
-              <Card key={character.id} character={character} />
-            ))}
-          </div>
-          <Pagination />
-        </>
+        <ul className="gridcards">
+          {characters?.results?.map((character) => (
+            <Card key={character.id} character={character} />
+          ))}
+        </ul>
       )}
     </>
   );

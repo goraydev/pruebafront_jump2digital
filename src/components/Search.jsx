@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export const Search = ({ handleKey }) => {
-  const [searchInput, setSearchInput] = useState("");
-
+export const Search = ({ handleKey, searchInput, setSearchInput }) => {
   return (
     <div className="my-12 relative flex items-center justify-end">
       <form action="" className="w-full">
