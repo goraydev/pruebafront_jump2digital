@@ -1,8 +1,34 @@
-# React + Vite
+# Prueba Front End - Hackaton (JUMP2DIGITAL)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web que muestra información sobre los personajes de la serie "Rick y
+Morty" desde una API pública y contiene un campom de búsqueda
 
-Currently, two official plugins are available:
+## API de Referencia
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```https
+  https://rickandmortyapi.com/documentation
+```
+
+## Pila tecnológica
+
+**Client:** React, TailwindCSS
+
+## Instalación
+
+Instalar mi proyecto con npm
+
+- Clonar el proyecto, luego ejecutar el comando
+
+```bash
+  npm install
+```
+
+- Para correr el proyecto, ejecutar el siguiente comando:
+
+```bash
+  npm run dev
+```
+
+## Demo
+
+Insert gif or link to demo
