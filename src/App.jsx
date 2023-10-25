@@ -1,11 +1,8 @@
-import titleRickyMorty from "./assets/titleRickyMorty.webp";
-import { Search } from "./components/Search";
-import { Cards } from "./components/Cards";
-import useFetch from "./hooks/useFetch";
+import { useState, useEffect } from "react";
 import getCharacterApi from "./api/getCharacterApi";
-import { Pagination } from "./components/Pagination";
-import { useState } from "react";
-import { useEffect } from "react";
+import useFetch from "./hooks/useFetch";
+import titleRickyMorty from "./assets/titleRickyMorty.webp";
+import { Search, Cards, Pagination } from "./components";
 import appApi from "./api/appApi";
 
 function App() {

@@ -4,7 +4,6 @@ const { VITE_API_URL } = getEnvariables();
 
 const appApi = async (page, name) => {
     if (name !== undefined) {
-
         const url = `${VITE_API_URL}/character?page=${page}&name=${name}`;
         const resp = await fetch(url);
         const res = await resp.json();
