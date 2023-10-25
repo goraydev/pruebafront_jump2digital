@@ -30,5 +30,4 @@ Instalar mi proyecto con npm
 ```
 
 ## Demo
-
-Insert gif or link to demo
+https://pruebafrontendjump2digital.netlify.app/
