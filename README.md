@@ -1,7 +1,7 @@
 # Prueba Front End - Hackaton (JUMP2DIGITAL)
 
 Aplicación web que muestra información sobre los personajes de la serie "Rick y
-Morty" desde una API pública y contiene un campom de búsqueda
+Morty" desde una API pública y contiene un campo de búsqueda
 
 ## API de Referencia
 
@@ -11,19 +11,20 @@ Morty" desde una API pública y contiene un campom de búsqueda
 
 ## Pila tecnológica
 
-**Client:** React, TailwindCSS
+**Cliente:** React, TailwindCSS
 
 ## Instalación
 
-Instalar mi proyecto con npm
-
-- Clonar el proyecto, luego ejecutar el comando
-
+- Clonar el proyecto
+```bash
+  git clone https://github.com/goraydev/pruebafront_jump2digital.git
+```
+- Luego en la carpeta del proyecto ejecutar
 ```bash
   npm install
 ```
 
-- Para correr el proyecto, ejecutar el siguiente comando:
+- Posteriormente para correr el proyecto, ejecutar el siguiente comando:
 
 ```bash
   npm run dev
